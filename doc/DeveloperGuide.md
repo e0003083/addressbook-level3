@@ -46,6 +46,7 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
 `* *` | user | hide [private contact details](#private-contact-detail) by default | to minimize chance of someone else seeing them by accident
+`* * *` | user | sort the address book | find people easily
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
 
 
@@ -74,12 +75,30 @@ Use case ends.
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
 
+ **MSS**
+
+1. User requests to rename tag
+2. Address book confirm request with user
+3. User confirms to rename tag
+4. Address book renames tag
+Use case ends.
+
+**Extensions**
+
+2a. The tag does not exist.
+> AddressBook shows an error message.
+> Use case ends
+
+3a. User denies the rename of tag
+> Use case ends
+
 ## Appendix C : Non Functional Requirements
 
 1. Should work on any [mainstream OS](#mainstream-os) as long as it has Java 8 or higher installed.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
+5. Should be user friendly
 
 ## Appendix D : Glossary
 
